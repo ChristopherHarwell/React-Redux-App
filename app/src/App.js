@@ -2,6 +2,7 @@ import React from "react";
 import { getFilm } from "./actions/"; // change action name and possibly file path
 import { connect } from "react-redux";
 import AnimeList from "./components/AnimeList";
+import { Button } from "@material-ui/core";
 
 const App = (props) => {
     const fetchFilm = (event) => {
@@ -10,10 +11,8 @@ const App = (props) => {
   };
   return (
     <div className="App">
-      // add components here props are now equal to state
-
       <AnimeList films={props.storeProps} url={props.storeProps.url} name={props.storeProps.title}/>
-      <button onClick={fetchFilm}>Fetch Film</button>
+      <Button variant="outlined" style={{borderColor: "#FFFFF0", color: "#FFFFF0", backgroundColor: "#40E0D0"}} onClick={fetchFilm}>Fetch Film</Button>
     </div>
     
   )};
