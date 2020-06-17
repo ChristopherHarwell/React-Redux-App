@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, Typography, Grid } from "@material-ui/core";
+import { Card, CardContent, Typography} from "@material-ui/core";
 import "../App.css";
 const AnimeList = (props) => {
   return (
